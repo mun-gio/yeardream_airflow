@@ -20,4 +20,5 @@ bash_t2 = BashOperator(
     bash_command="echo $HOSTNAME",
 )
 
+
 bash_t1 >> bash_t2
