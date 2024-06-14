@@ -8,7 +8,7 @@ my_dag = DAG(
     schedule="0 9 * * 1,5",
     start_date=pendulum.datetime(2024, 6, 1, tz="Asia/Seoul"),
     catchup=True,
-    tags=["homework"]
+    tags=["homework"],
 )
 bash_t1 = BashOperator(
     task_id="bash_t1",
