@@ -11,14 +11,15 @@ from airflow.operators.bash import BashOperator
     tags=["homework"],
 )
 def my_dag():
-    DAG.bash_t1 = BashOperator(
+    bash_t1 = BashOperator(
         task_id="bash_t1",
         bash_command="echo whoami",
     )
 
-    DAG.bash_t2 = BashOperator(
+    bash_t2 = BashOperator(
         task_id="bash_t2",
         bash_command="echo $HOSTNAME",
     )
 
-    DAG.bash_t1 >> DAG.bash_t2
+    bash_t1 >> bash_t2
+dag = my_dag()
