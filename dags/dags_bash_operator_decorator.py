@@ -3,7 +3,7 @@ import datetime
 import pendulum
 from airflow.operators.bash import BashOperator
 
-@DAG(
+@dag(
     dag_id="dags_bash_operator_decorator",
     schedule="0 0 * * *",
     start_date=pendulum.datetime(2024, 6, 1, tz="Asia/Seoul"),
@@ -22,4 +22,4 @@ def my_dag():
     )
 
     bash_t1 >> bash_t2
-DAG = my_dag()
+dag = my_dag()
