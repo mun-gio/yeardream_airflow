@@ -1,6 +1,7 @@
 from airflow import DAG
 import datetime
 import pendulum
+from airflow.decorators import dag
 from airflow.operators.bash import BashOperator
 
 @dag(
@@ -22,5 +23,5 @@ def my_dag():
     )
 
     bash_t1 >> bash_t2
-    
-my_dag()
+
+dag_instance = my_dag()
