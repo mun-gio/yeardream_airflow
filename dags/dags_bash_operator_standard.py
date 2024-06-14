@@ -13,11 +13,13 @@ my_dag = DAG(
 bash_t1 = BashOperator(
     task_id="bash_t1",
     bash_command="echo whoami",
+    dag = my_dag,
 )
 
 bash_t2 = BashOperator(
     task_id="bash_t2",
     bash_command="echo $HOSTNAME",
+    dag = my_dag,
 )
 
 
