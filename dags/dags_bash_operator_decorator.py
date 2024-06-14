@@ -22,4 +22,5 @@ def my_dag():
     )
 
     bash_t1 >> bash_t2
-dag = my_dag()
+    
+my_dag()
