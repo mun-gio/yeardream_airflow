@@ -21,4 +21,8 @@ def regist2(name, sex, *args, **kwargs):
     data_interval_start = kwargs.get('data_interval_start')
     data_interval_end = kwargs.get('data_interval_end')
     print(data_interval_start)
+<<<<<<< HEAD
     print(data_interval_end)
+=======
+    print(data_interval_end)
+>>>>>>> origin/master
